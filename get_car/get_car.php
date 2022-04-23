@@ -3,8 +3,10 @@
 include '../connect.php';
 
 
- $user_id = $_GET['user_id'];
- $queryResult = $condb->query("SELECT * FROM tb_user WHERE user_id = '".$user_id."' ");
+
+
+
+$queryResult = $condb->query("SELECT * FROM tb_car ");
 
 	$result = array ();
 
