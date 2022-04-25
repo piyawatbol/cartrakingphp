@@ -10,7 +10,7 @@
     $result = mysqli_query($condb,$sql);
 
     if($result){
-        $sql = "UPDATE tb_car SET lo_driver_lati ='$lati',lo_driver_longti ='$longti' WHERE car_id = '$car_id'";
+        $sql = "UPDATE tb_car SET lo_customer_lati ='$lati',lo_customer_longti ='$longti' WHERE car_id = '$car_id'";
         $result = mysqli_query($condb,$sql);
     }else{
         echo 'no';
