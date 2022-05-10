@@ -2,10 +2,6 @@
 
 include '../connect.php';
 
-
-
-
-
 $queryResult = $condb->query("SELECT * FROM tb_car ");
 
 	$result = array ();
