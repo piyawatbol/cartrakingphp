@@ -1,14 +1,14 @@
 <?php
 
-include '../connect.php';
+    require '../connect.php';
 
-$queryResult = $condb->query("SELECT * FROM tb_map ");
+    $sql = "SELECT * FROM tb_map";
+    $query = mysqli_query($condb,$sql);
+    $result = array ();
+    while($row = mysqli_fetch_assoc($query)){
+        $result[] = $row;
+    }
+    echo json_encode($result);
 
-	$result = array ();
 
-while ($fetchData = $queryResult->fetch_assoc()) {
-    $result[] = $fetchData;
-}
-
-echo json_encode($result);
 ?>
