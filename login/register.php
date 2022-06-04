@@ -28,9 +28,9 @@ $pass_word = $_POST['pass_word'];
         if($count_phone == 1){
             echo json_encode('duplicate_phone');
         }else{
-              $sql_insert = "INSERT INTO tb_user (name,phone,email,user_name,pass_word,status)";
-         $sql_insert .= " VALUES ('$name','$phone','$email','$user_name','$pass_word','customer')";
-         $result_insert = mysqli_query($condb,$sql_insert);
+              $sql_insert = "INSERT INTO tb_user (name,phone,email,user_name,pass_word,img,status,otp)";
+              $sql_insert .= " VALUES ('$name','$phone','$email','$user_name','$pass_word','','customer','0')";
+              $result_insert = mysqli_query($condb,$sql_insert);
              if ($result_insert) {
                  echo json_encode('succes');
              } else {
